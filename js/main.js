@@ -33,4 +33,16 @@ document.addEventListener('DOMContentLoaded', function(){
   if (typeof bootstrap !== 'undefined') {
     new bootstrap.ScrollSpy(document.body, { target: '#navMenu', offset });
   }
+
+  // Ensure body has top padding equal to navbar height so fixed navbar doesn't cover content
+  function adjustBodyPadding(){
+    const nav = document.querySelector('.navbar');
+    if(nav){
+      document.body.style.paddingTop = nav.offsetHeight + 'px';
+    } else {
+      document.body.style.paddingTop = '';
+    }
+  }
+  adjustBodyPadding();
+  window.addEventListener('resize', adjustBodyPadding);
 });
