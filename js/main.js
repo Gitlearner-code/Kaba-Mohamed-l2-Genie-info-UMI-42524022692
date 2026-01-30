@@ -29,20 +29,51 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Initialize Bootstrap ScrollSpy with dynamic offset so active nav links update while scrolling
   const nav = document.querySelector('.navbar');
-  const offset = nav ? nav.offsetHeight + 10 : 80;
-  if (typeof bootstrap !== 'undefined') {
-    new bootstrap.ScrollSpy(document.body, { target: '#navMenu', offset });
+  let scrollSpyInstance;
+
+  function initScrollSpy(){
+    const offset = nav ? nav.offsetHeight + 10 : 80;
+    if (typeof bootstrap !== 'undefined') {
+      if (scrollSpyInstance) {
+        // if instance exists, refresh to recalculate offsets
+        try{ scrollSpyInstance.refresh(); }catch(e){ /* ignore */ }
+      } else {
+        scrollSpyInstance = new bootstrap.ScrollSpy(document.body, { target: '#navMenu', offset });
+      }
+    }
   }
+  initScrollSpy();
 
   // Ensure body has top padding equal to navbar height so fixed navbar doesn't cover content
   function adjustBodyPadding(){
-    const nav = document.querySelector('.navbar');
     if(nav){
       document.body.style.paddingTop = nav.offsetHeight + 'px';
     } else {
       document.body.style.paddingTop = '';
     }
+    // Re-init/refresh ScrollSpy with the updated offset
+    initScrollSpy();
   }
   adjustBodyPadding();
   window.addEventListener('resize', adjustBodyPadding);
+
+  // Make navbar more visible on scroll and ensure it's never hidden by ScrollSpy events
+  function onScroll(){
+    if(!nav) return;
+    if(window.scrollY > 20){
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Defensive: if ScrollSpy activates a new section, ensure navbar is visible
+  document.addEventListener('activate.bs.scrollspy', function(){
+    if(nav){
+      nav.style.display = '';
+      nav.classList.remove('invisible');
+    }
+  });
 });
