@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio — Présentation personnelle, études, compétences, projets, galerie et contact">
+  <title>Portfolio — Votre Prénom Nom</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navMenu" data-bs-offset="80" tabindex="0">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Mohamed<span class="text-gradient">Kaba</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#studies">Études</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#photos">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Jeu</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero bg-dark text-light py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-bold">Bonjour Je suis <span class="text-gradient">Mohamed</span></h1>
+          <p class="lead mt-3">Développeur / Étudiant en informatique. Passionné par les interfaces modernes et l'expérience utilisateur.<br>Style inspiré par JetBrains, responsive, simple à personnaliser.</p>
+          <div class="mt-4">
+            <a href="#projects" class="btn btn-primary btn-lg me-2">Voir mes projets</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg">Me contacter</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center mt-4 mt-lg-0">
+          <img src="https://via.placeholder.com/360x360.png?text=Votre+Photo" alt="Photo" class="rounded img-fluid shadow-lg" style="max-width:320px;">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- ABOUT -->
+    <section id="about" class="mb-5">
+      <h2 class="h3 mb-3">À propos</h2>
+      <div class="card p-4 shadow-sm">
+        <p>Bonjour, je m’appelle Kaba Mohamed. Je suis étudiant en informatique et je souhaite devenir à la fois ingénieur logiciel et chercheur en informatique. Je suis passionné par la conception de solutions technologiques efficaces et par l’exploration des sciences informatiques pour résoudre des problèmes concrets.
+</p>
+      </div>
+    </section>
+
+    <!-- STUDIES -->
+    <section id="studies" class="mb-5">
+      <h2 class="h3 mb-3">Études</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card p-3 shadow-sm">
+            <h5 class="mb-1">Licence / Bachelor Universite Mercure</h5>
+            <p class="mb-0 text-muted">2025  GI/ Tres Bien</p>
+            <p class="mt-2">Je poursuis actuellement des études en informatique, avec un intérêt particulier pour le développement logiciel et les sciences informatiques.
+</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-3 shadow-sm">
+            <h5 class="mb-1">Baccalauréat  INSTITUTION Sainte Marie de Dixinn</h5>
+            <p class="mb-0 text-muted">2024  Scienses Mathematiques</p>
+            <p class="mt-2">J’ai obtenu un baccalauréat en sciences mathématiques, une filière qui met l’accent sur la rigueur et l’analyse. Ce parcours m’a permis de développer de solides compétences en mathématiques.</p>
+</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mb-5">
+      <h2 class="h3 mb-3">Compétences</h2>
+      <div class="card p-4 shadow-sm">
+        <p class="mb-2">Technologies maîtrisées :</p>
+        <div class="mb-3">
+          <span class="badge bg-secondary me-1">HTML</span>
+          <span class="badge bg-secondary me-1">CSS</span>
+          <span class="badge bg-secondary me-1">JavaScript</span>
+          <span class="badge bg-secondary me-1">Bootstrap</span>
+          <span class="badge bg-secondary me-1">React</span>
+          <span class="badge bg-secondary me-1">Node.js</span>
+        </div>
+        <p class="mb-0"></p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mb-5">
+      <h2 class="h3 mb-3">Projets</h2>
+      <div class="row g-4">
+        <!-- Project Card -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100 shadow-sm">
+            <img src="photos/developpement-web-service.jpg" class="card-img-top" alt="Projet 1">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Site Web</h5>
+              <p class="card-text">Developes de nombreux projets web static</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-sm btn-outline-primary me-2">Voir</a>
+                <a href="#" class="btn btn-sm btn-primary">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100 shadow-sm">
+            <img src="photos/microsoft-365-oUbzU87d1Gc-unsplash.jpg" class="card-img-top" alt="Projet 2">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Automatisation avec python</h5>
+              <p class="card-text">Automatise un projet de calcul de facture en liant exel et python a travers openpyxl</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-sm btn-outline-primary me-2">Voir</a>
+                <a href="#" class="btn btn-sm btn-primary">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100 shadow-sm">
+            <img src="photos/quiz-game.jpg" class="card-img-top" alt="Quiz Game">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Jeu : Quiz</h5>
+              <p class="card-text">Petit quiz interactif pour tester vos connaissances.</p>
+              <div class="mt-auto">
+                <a href="quiz.html" class="btn btn-sm btn-outline-primary me-2">Jouer</a>
+                <a href="#" class="btn btn-sm btn-primary">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section id="photos" class="mb-5">
+      <h2 class="h3 mb-3">Photos</h2>
+      <div class="row g-2">
+        <!-- Sample thumbnails - replace links with your images -->
+        <div class="col-6 col-sm-4 col-md-3">
+          <img src="photos/class-sport-image.jpg" alt="Photo 1" class="img-thumbnail">
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <img src="photos/WIN_20250831_20_50_05_Pro.jpg" alt="Photo 2" class="img-thumbnail">
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <img src="photos/WIN_20251004_12_38_33_Pro.jpg" alt="Photo 3" class="img-thumbnail">
+        </div>
+        <div class="col-6 col-sm-4 col-md-3">
+          <img src="photos/child-phto.jpg" alt="Photo 4" class="img-thumbnail">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-5">
+      <h2 class="h3 mb-3">Contact</h2>
+      <div class="card p-4 shadow-sm">
+        <p class="mb-1">Email: <a href="mailto:votre.email@example.com">darwill367@gmail.com</a></p>
+        <p class="mb-1">GitHub: <a href="#">github.com/Git-learner</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 bg-dark text-light">
+    <div class="container text-center small">
+      <div>© <span id="year"></span> Mohamed  <a href="#" class="link-light">Voir le repo</a></div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (Popper included) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
