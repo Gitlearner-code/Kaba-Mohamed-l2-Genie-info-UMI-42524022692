@@ -60,6 +60,8 @@ document.addEventListener('DOMContentLoaded', function(){
   // Make navbar more visible on scroll and ensure it's never hidden by ScrollSpy events
   function onScroll(){
     if(!nav) return;
+    // Defensive: force navbar to have a very high z-index to avoid being painted under other stacking contexts
+    nav.style.zIndex = '99999';
     if(window.scrollY > 20){
       nav.classList.add('scrolled');
     } else {
